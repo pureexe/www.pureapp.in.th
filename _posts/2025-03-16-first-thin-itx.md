@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ลองประกอบ Thin ITX ครั้งงแรก
+title: ลองประกอบ Thin ITX ครั้งแรก
 date: '2025-03-16T11:00:06.000+07:00'
 author: Pakkapon Phongthawee
 tags:
