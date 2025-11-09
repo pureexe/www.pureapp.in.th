@@ -4,7 +4,7 @@
 }
 .card-titlepanel{
 	border-bottom: 1px solid rgba(160,160,160,0.2);
-	padding: 10px;
+	padding: 1rem 2rem;
 }
 .post{
   margin-top:10px;
@@ -34,4 +34,23 @@ footer{
       padding: 10px;
     }
   }
+}
+
+/* CSS for light and dark themes */
+
+[data-theme=light],
+.theme-light {
+  /* CSS Variables */
+  --bulma-body-background-color: rgb(240, 240, 240);
+}
+
+[data-theme=dark],
+.theme-dark {
+  /* CSS Variables */
+  --bulma-body-background-color: rgb(9, 10, 12);
+}
+
+/* CSS for all theme */
+.card {
+  --bulma-card-shadow: 0 0em 0 0 hsla(0, 0, 0,0.0),0 0px 0 0px hsla(0,0,0,0.0)
 }
