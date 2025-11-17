@@ -1,7 +1,7 @@
 # Site settings
-title: Pure's app
-email: me@pureapp.in.th
-description: เว็บนี้คือบล็อกส่วนตัวของเพียว (ภัคพล พงษ์ทวี) เขียนขึ้นเพื่อเผยแพร่ ความรู้และโปรแกรมที่สร้างขึ้น ผมหวังว่าทุกท่านที่เข้ามาจะได้รับประโยชน์ไม่มากก็น้อย
+title: pure.in.th
+title_frontpage: บล็อกของเพียว
+description: เว็บนี้คือบล็อกส่วนตัวของเพียว เขียนขึ้นเพื่อเผยแพร่ ความรู้และโปรแกรมที่สร้างขึ้น ผมหวังว่าทุกท่านที่เข้ามาจะได้รับประโยชน์ไม่มากก็น้อย
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://pure.in.th" # the base hostname & protocol for your site
 repo: https://github.com/pureexe/www.pureapp.in.th # repo path for amp support
