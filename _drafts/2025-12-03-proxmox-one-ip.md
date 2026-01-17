@@ -37,11 +37,12 @@ iptables -A FORWARD -i vmbr2 -o vmbr0 -j ACCEPT
 # Forward traffic from host port 10102 to CT
 iptables -t nat -A PREROUTING -p tcp --dport 10102 -j DNAT --to-destination 192.168.1.102:22
 
+
 # Allow forwarding
 iptables -A FORWARD -p tcp -d 192.168.1.102 --dport 22 -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
 
 # Masquerade (for proper NAT)
-iptables -t nat -A POSTROUTING -p tcp -d 192.168.1.102 --dport 22 -j MASQUERADE
+iptables -t nat -A POSTROUTING -p tcp -d 192.168.1.101 --dport 22 -j MASQUERADE
 
 # บันทึก
 
