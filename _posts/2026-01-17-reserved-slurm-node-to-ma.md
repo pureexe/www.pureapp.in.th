@@ -1,11 +1,11 @@
 ---
 layout: post
 title: วิธี reservation (จอง) slurm node เพื่อแก้ไข hardware
-date: '2025-12-07T14:55:06.000+07:00'
+date: '2026-01-17T11:44:06.000+07:00'
 author: Pakkapon Phongthawee
 tags:
 - คอมพิวเตอร์
-modified_time: '2025-09-05T14:55:06.000+07:00'
+modified_time: '2026-01-17T11:44:06.000+07:00'
 ---
 
 
