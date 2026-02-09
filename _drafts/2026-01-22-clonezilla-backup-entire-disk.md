@@ -54,3 +54,35 @@ modified_time: '2026-01-22T11:46:06.000+07:00'
 ![set file name](/assets/images/post/clonezilla-backup-entire-disk/13_save_disk_name.jpg)
 
 
+เลือก disk ที่จะ backup
+![select disk](/assets/images/post/clonezilla-backup-entire-disk/14_select_disk.jpg)
+
+เลือก compression
+
+![select compression](/assets/images/post/clonezilla-backup-entire-disk/15_select_compression.jpg)
+
+ข้ามการ check ไม่ต้องซ่อม filesystem ตอนนี้
+
+![select compression](/assets/images/post/clonezilla-backup-entire-disk/16_skip_checking.jpg)
+
+ให้ทำการ check image ที่สร้างขึ้น ป้องกันไฟล์เสีย
+
+![check image](/assets/images/post/clonezilla-backup-entire-disk/17_check_image.jpg)
+
+ข้าม encryption ไม่มีอะไรลับขนาดนั้น เดี๋ยว key หายรหัสผิดจะวุ่นวาย
+
+![skip encrypt](/assets/images/post/clonezilla-backup-entire-disk/18_skip_encrypt.jpg)
+
+ไม่ต้องเขียน log เนื่องจากเรา boot จาก virtual CD ไม่มีที่ให้เก็บอยู่ดี
+
+![no log](/assets/images/post/clonezilla-backup-entire-disk/19_no_log.jpg)
+
+ก่อนจะรันนานๆ มากๆ จนไปนอนได้ ระบบจะถามอีกครั้งว่าจะทำอะไร
+
+![set last command](/assets/images/post/clonezilla-backup-entire-disk/20_last_command.jpg)
+
+และสุดท้าย ก็รอมันทำการ clone ไปเรื่อยๆ  หนีไปนอนได้
+
+![clone image](/assets/images/post/clonezilla-backup-entire-disk/21_part_clone.jpg)
+
+เท่านี้ก็จะได้ไฟล์ output ออกมาไว้ลองผิดลองถูกแล้ว
