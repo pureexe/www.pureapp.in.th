@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Slurm ส่ง job แล้วค้างขึ้นเกิดจาก uid ไม่ตรง
-date: '2026-02-14T00:09:06.000+07:00'
+date: '2026-02-14T14:52:00.000+07:00'
 author: Pakkapon Phongthawee
 tags:
-- คอมพิวเตอร์
-modified_time: '2026-02-14T00:09:06.000+07:00'
+- computer
+modified_time: '2026-02-14T14:52:00.000+07:00'
 ---
 
 เนื่องจากทำการลง OS ใหม่ให้กับ compute node แล้วพยายามต่อกลับเข้า slurm controller ที่มีอยู่ ปรากฏว่าเกิดอาการค้างที่ Waiting for resource ทำให้จับต้นชนปลายไม่ถูก
