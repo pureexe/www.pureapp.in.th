@@ -1,6 +1,5 @@
 {
-  "markdown.copyFiles.destination": {
-    "_posts/*.md": "assets/images/${fileNameBase}/",
-    "_drafts/*.md": "assets/images/${fileNameBase}/"
-  }
+  "pasteImage.basePath": "${workspaceFolder}",
+  "pasteImage.path": "assets/images/${currentFileNameWithoutExt}",
+  "pasteImage.insertPattern": "![](/assets/images/${currentFileNameWithoutExt}/${imageFileName})"
 }
