@@ -6,6 +6,7 @@
 }
 
 body {
+     /* ให้ UI ทั่วไปของเว็บใช้ Prompt เป็นค่าเริ่มต้น */
     font-family: 'Prompt', sans-serif;
     background-color: var(--bulma-scheme-main-ter);
     
@@ -257,4 +258,33 @@ body {
     .ariticle-header-text{
         margin-top: 1.5rem;
     }
+}
+
+/* =========================================
+   TYPOGRAPHY PAIRING (การจับคู่ฟอนต์)
+   ========================================= */
+/* บังคับให้หัวข้อทั้งหมดใช้ Prompt เพื่อความโมเดิร์น */
+h1, h2, h3, h4, h5, h6, .title, .navbar, .button, .tag {
+    font-family: 'Prompt', sans-serif;
+}
+
+/* คำโปรยในหน้า Index ให้ใช้ฟอนต์มีหัวเพื่อความน่าอ่าน */
+.post-excerpt {
+    font-family: 'Sarabun', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    /* ... (โค้ดเดิม) ... */
+}
+
+/* เนื้อหาบทความในหน้า Post ให้ใช้ฟอนต์มีหัว (Sarabun) ทั้งหมด */
+.content {
+    font-family: 'Sarabun', sans-serif;
+    font-size: 1.15rem; /* ปรับขนาดให้ใหญ่ขึ้นนิดหน่อยสำหรับการอ่านข้อความมีหัว */
+    line-height: 1.8;
+}
+
+/* ป้องกันไม่ให้ฟอนต์มีหัวไปกระทบกับ Code Block */
+.content pre, 
+.content code {
+    font-family: monospace; /* หรือฟอนต์โค้ดที่คุณชอบ */
 }
