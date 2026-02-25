@@ -1,59 +1,257 @@
-.post-title{
-    font-size: 1.64rem;
-    text-align: center;
-}
-.card-titlepanel{
-	border-bottom: 1px solid rgba(160,160,160,0.2);
-	padding: 1rem 2rem;
-}
-.post{
-  margin-top:10px;
-}
-.card-content{
-  padding: 1rem;
-}
-footer{
-  margin-top: 20px;
+/* =========================================
+   GLOBAL STYLES & VARIABLES
+   ========================================= */
+:root {
+    --brand-color: #7957d5;
 }
 
-.toast {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1000;
-  display: none; /* Hidden by default */
+body {
+    font-family: 'Prompt', sans-serif;
+    background-color: var(--bulma-scheme-main-ter);
+    
+    /* Subtle Dot Grid Pattern */
+    background-image: radial-gradient(var(--bulma-border-weak) 1px, transparent 0);
+    background-size: 48px 48px;
+    background-position: -1px -1px;
+ 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-@media only screen and (max-width: 768px)  {
-  .panel-main{
-    padding: 0px;
-  }
-  .post, .index-post{
-    .card-content{
-      padding: 10px;
+/* Navbar */
+.navbar {
+    border-bottom: 1px solid var(--bulma-border-weak);
+    background-color: var(--bulma-scheme-main) !important;
+}
+
+.brand-text {
+    font-weight: 700;
+    color: var(--brand-color);
+    letter-spacing: 0.5px;
+}
+
+/* Shared Titles & Meta */
+.post-title {
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--brand-color);
+    margin-bottom: 0.5rem;
+}
+
+.post-title a {
+    color: var(--bulma-text-strong);
+    transition: color 0.2s;
+}
+
+.post-title a:hover {
+    color: var(--brand-color);
+}
+
+/* =========================================
+   INDEX PAGE STYLES (Blog List)
+   ========================================= */
+.post-card {
+    border-radius: 8px; 
+    border: 1px solid var(--bulma-border-weak);
+    background-color: var(--bulma-scheme-main);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.post-card:hover {
+    background-color: var(--bulma-scheme-main-bis);
+    border-color: var(--bulma-border);
+}
+
+.post-content {
+    flex: 1; 
+    min-width: 0; 
+}
+
+.post-excerpt {
+    color: var(--bulma-text);
+    font-size: 0.95rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.post-meta-index {
+    font-size: 0.85rem;
+    color: var(--bulma-text);
+    opacity: 0.7;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+}
+
+.post-thumbnail-wrapper {
+    flex-shrink: 0;
+    width: 220px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+
+.post-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid var(--bulma-border-weak);
+}
+
+/* =========================================
+   POST PAGE STYLES (Single Article)
+   ========================================= */
+.single-post-container {
+    border-radius: 8px;
+    border: 1px solid var(--bulma-border-weak);
+    background-color: var(--bulma-scheme-main);
+    padding: 3rem; 
+    margin-bottom: 2rem;
+}
+
+.single-post-meta {
+    font-size: 0.85rem;
+    color: var(--bulma-text); 
+    opacity: 0.7; 
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 0.75rem 1rem;
+    border-bottom: 1px solid var(--bulma-border-weak);
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.featured-image {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    display: block;
+    border-radius: 8px;
+    border: 1px solid var(--bulma-border-weak);
+}
+
+.content {
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.content pre {
+    border-radius: 8px;
+    border: 1px solid var(--bulma-border-weak);
+    background-color: #1a1b26; 
+    color: #a9b1d6;
+    margin-bottom: 1.5rem;
+}
+.content div.highlight {
+    margin-bottom: var(--bulma-content-block-margin-bottom);
+}
+
+.content code:not(pre code) {
+    background-color: var(--bulma-scheme-main-ter);
+    color: var(--brand-color);
+    border-radius: 4px;
+    padding: 0.15em 0.4em;
+}
+
+/* =========================================
+   WIDGETS & FOOTER
+   ========================================= */
+.bottom-widgets {
+    border-top: 1px solid var(--bulma-border-weak);
+    padding-top: 2rem;
+    margin-top: 2rem;
+}
+
+.recent-posts-list {
+    list-style-type: none !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+}
+
+.recent-posts-list li {
+    border-bottom: 1px dashed var(--bulma-border-weak);
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.recent-posts-list li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.recent-posts-list a {
+    color: var(--bulma-text-strong);
+    transition: color 0.2s;
+    line-height: 1.4;
+    display: block;
+}
+
+.recent-posts-list a:hover {
+    color: var(--brand-color);
+}
+
+.footer {
+    margin-top: auto;
+    background-color: var(--bulma-scheme-main);
+    border-top: 1px solid var(--bulma-border-weak);
+    padding: 2rem 1.5rem;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE (Edge-to-Edge Cards)
+   ========================================= */
+@media (max-width: 768px) {
+    /* เอา Padding ซ้าย-ขวาของ Section ออก เพื่อให้ Card ชิดขอบจอ */
+    .section {
+        padding: 1.5rem 0 !important; 
     }
-  }
-  .index-post{
-    padding-top: 10px;
-  }
-}
 
-/* CSS for light and dark themes */
+    /* สิ่งที่อยู่นอก Card ต้องมี Padding ซ้าย-ขวา เพื่อไม่ให้ตัวหนังสือติดขอบจอ */
+    .mobile-padded {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 
-[data-theme=light],
-.theme-light {
-  /* CSS Variables */
-  --bulma-body-background-color: rgb(240, 240, 240);
-}
+    /* Index Page: Post Cards */
+    .post-card {
+        flex-direction: column-reverse; 
+        gap: 1rem;
+        padding: 1.25rem 1rem;
+        border-radius: 0; /* ลบมุมโค้ง */
+        border-left: none; /* ลบขอบซ้าย */
+        border-right: none; /* ลบขอบขวา */
+    }
 
-[data-theme=dark],
-.theme-dark {
-  /* CSS Variables */
-  --bulma-body-background-color: rgb(9, 10, 12);
-}
+    .post-thumbnail-wrapper {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
 
-/* CSS for all theme */
-.card {
-  --bulma-card-shadow: 0 0em 0 0 hsla(0, 0, 0,0.0),0 0px 0 0px hsla(0,0,0,0.0)
+    /* Post Page: Single Article Container */
+    .single-post-container {
+        padding: 1.5rem 1rem; 
+        border-radius: 0; 
+        border-left: none; 
+        border-right: none; 
+        margin-bottom: 1.5rem; 
+    }
+
+    .featured-image {
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
 }

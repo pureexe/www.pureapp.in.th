@@ -1,0 +1,16 @@
+<div class="is-flex is-justify-content-space-between mt-5 mb-6 mobile-padded">
+    <a href="/" class="button\">
+        <span class="icon"><i class="fa-solid fa-arrow-left"></i></span>
+        <span>กลับหน้าแรก</span>
+    </a>
+    <div class="buttons">
+        <a class="button is-link is-light is-rounded" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | prepend: site.url }}">
+            <span class="icon"><i class="fa-brands fa-facebook"></i></span>
+            <span>แชร์</span>
+        </a>
+        <a class="button is-info is-light is-rounded" target="_blank" href="https://twitter.com/intent/tweet?url={{ page.url | prepend: site.url }}&text={{ page.title | url_encode }}">
+            <span class="icon"><i class="fa-brands fa-twitter"></i></span>
+            <span>แชร์</span>
+        </a>
+    </div>
+</div>

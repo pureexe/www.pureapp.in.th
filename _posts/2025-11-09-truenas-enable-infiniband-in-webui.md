@@ -5,7 +5,7 @@ date: '2025-11-09T22:15:06.000+07:00'
 author: Pakkapon Phongthawee
 lang: th
 tags:
-- คอมพิวเตอร์
+- computer
 thumbnail: /assets/images/thumbnail/truenas-enable-infiniband-in-webui.jpg
 modified_time: 2025-11-09T22:15:06.000+07:00'
 ---

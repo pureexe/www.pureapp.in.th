@@ -38,6 +38,19 @@ month_name:
   - ตุลาคม
   - พฤศจิกายน
   - ธันวาคม
+month_name_short:
+  - ม.ค.
+  - ก.พ.
+  - มี.ค.
+  - เม.ย.
+  - พ.ค.
+  - มิ.ย.
+  - ก.ค.
+  - ส.ค.
+  - ก.ย.
+  - ต.ค.
+  - พ.ค.
+  - ธ.ค.
 tag_name:
   announcement: ประกาศ
   computer: คอมพิวเตอร์
@@ -45,3 +58,4 @@ tag_name:
   mathematics: คณิตศาสตร์
   review: รีวิว
   science: วิทยาศาสตร์
+  other: จิปาถะ

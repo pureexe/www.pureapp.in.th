@@ -1,97 +1,59 @@
 ---
 layout: default
 ---
-<div class="post">
-  <div class="card" itemscope itemtype='http://schema.org/BlogPosting'>
-    <meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" itemid="{{ site.baseurl | prepend: site.url }}"/>
-    <div class="card-titlepanel">
-      <a href="#"><h1 class="post-title" itemprop="headline">{{ page.title }}</h1></a>
-      <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-        {% if page.thumbnail %}
-        {% assign selfHostThumbnail = page.thumbnail | split:"://" | size %}
-        <meta itemprop="url" content="{% if selfHostThumbnail == 1 %}{{ page.thumbnail | prepend: site.baseurl | prepend: site.url}}{% else %}{{page.thumbnail}}{% endif %}"/>
-        <meta itemprop="width" content="640" />
-        <meta itemprop="height" content="312" />
-        {% else %}
-        <meta  itemprop="url" content='{{"/assets/images/pureapp-logo-200.png" | prepend: site.baseurl | prepend: site.url }}'/>
-        <meta itemprop="width" content="200" />
-        <meta itemprop="height" content="200" />
-        {% endif %}
-      </div>
-    </div>
-    <div class="card-content">
-      <meta itemprop="description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 340 }}"/>
-      <article class="markdown-render" itemprop="articleBody">
-        {% assign rawExtension = page.path | split:"." | last %}
-        {% if rawExtension == "md" %}
-        <div class="center" style="margin-bottom: 20px;">
-          <img src="{{page.thumbnail}}" style="max-width:100%;width:640px;" />
-        </div>
-        {% endif %}
-        {{ content }}
-      </article>
-    </div>
-    <div class="card-footer">
-      <div itemprop="author" itemscope itemtype="https://schema.org/Person">
-        {% if page.author %}
-        <meta itemprop="name" content="{{page.author}}">
-        {% else %}
-        <meta itemprop="name" content="{{site.author}}">
-        {% endif %}
-      </div>
-      <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
-        {% if page.publisher %}
-        <meta itemprop="name" content="{{page.publisher}}">
-        {% else %}
-        <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-          <meta itemprop="url" content='{{"/assets/images/pureapp-logo-200.png " | prepend: site.baseurl | prepend: site.url }}'/>
-          <meta itemprop="width" content="200">
-          <meta itemprop="height" content="200">
-        </div>
-        <meta itemprop="name" content="{{site.publisher}}">
-        {% endif %}
-      </div>
-      <div class="card-footer-item" style="justify-content: left;padding-left:1.5rem;padding-right:1.5rem;">
-        <i class="mdi-device-access-time"></i>
-        <meta content="{{ page.modified_time }}" itemprop="dateModified">
-        <meta content="{{ page.date }}" itemprop="datePublished">
-        <span class="date-display" style="margin-right:0.5em;">
-          <span class="date">{{ page.date | date: "%d"}} {% assign post_month = page.date | date: "%-m" | minus: 1 %}{{ site.month_name[post_month] }} {{ page.date | date: "%Y" | plus:"543"}}</span>
-        </span>
-        <div class="tags">
-          {% for tag in page.tags %}
-            {% if site.tag_name[tag] %}
-              <a href="{{baseurl}}/tag/{{tag}}" class="tag" rel="tag ">{{site.tag_name[tag]}}</a>
-            {% else %}
-              <a href="#" class="tag" rel="tag">{{tag}}</a>
-            {% endif %}
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="card" style="line-height:0px;">
-    <div class="card-comment">
-        <div class="fb-comments" data-href="{{ page.url | prepend: site.baseurl | prepend: site.url }}" data-width="100%" data-numposts="5"></div>
-    </div>
-  </div>
-  <div class="pagination" style="width: 100%;padding: 0px;margin-left: 0px;margin-right: 0px;margin-top: 20px;margin-bottom: 20px;justify-content: space-between;">
-    {% if page.next %}
-    <a class="button" href="{{ page.next.url }}" >
-      <span class="icon">
-        <i class="fa fa-arrow-left"></i>
-      </span>
-      <span>ใหม่กว่า</span>
-    </a>
-    {% endif %}
-    <div style="flex:1"></div>
-    {% if page.previous %}
-    <a style="" class="button" href="{{ page.previous.url }}" >
-      <span>เก่ากว่า</span>
-      <span class="icon">
-        <i class="fa fa-arrow-right"></i>
-      </span>
-    </a>
-    {% endif %}
-  </div>
-</div>
+
+
+
+            <article class="single-post-container" itemscope itemtype='http://schema.org/BlogPosting'>
+                <meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" itemid="{{ site.baseurl | prepend: site.url }}"/>
+                <h1 class="title is-3 post-title mb-4" itemprop="headline">
+                  {{ page.title }}
+                </h1>
+
+                <div class="single-post-meta">
+                    <span class="has-text-weight-medium"><i class="fa-regular fa-calendar mr-2"></i>18 มกราคม 2569</span>
+                    
+                    <div class="tags mb-0">
+                       
+                          {% for tag in page.tags %}
+                          {% if site.tag_name[tag] %}
+                            <a class="tag is-light has-text-grey-dark" rel="tag" href="{{baseurl}}/tag/{{tag}}">
+                              {{site.tag_name[tag]}}
+                            </a>
+                          {% else %}
+                            <a class="tag is-light has-text-grey-dark" rel="tag" href="{{baseurl}}/tag/{{tag}}">
+                              {{tag}}
+                            </a>
+                          {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+                
+                <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                  {% if page.thumbnail %}
+                  {% assign selfHostThumbnail = page.thumbnail | split:"://" | size %}
+                  <meta itemprop="url" content="{% if selfHostThumbnail == 1 %}{{ page.thumbnail | prepend: site.baseurl | prepend: site.url}}{% else %}{{page.thumbnail}}{% endif %}"/>
+                  <meta itemprop="width" content="640" />
+                  <meta itemprop="height" content="312" />
+                  {% else %}
+                  <meta  itemprop="url" content='{{"/assets/images/pureapp-logo-200.png" | prepend: site.baseurl | prepend: site.url }}'/>
+                  <meta itemprop="width" content="200" />
+                  <meta itemprop="height" content="200" />
+                  {% endif %}
+                </div>
+                
+                {% assign rawExtension = page.path | split:"." | last %}
+                {% if rawExtension == "md" %}
+                {% if page.thumbnail %}
+                <img src="{{ page.thumbnail | prepend: site.baseurl | prepend: site.url }}" class="featured-image">
+                {% endif %}
+                {% endif %}
+                
+                <div class="content" itemprop="articleBody">     <!-- class="markdown-render" -->
+
+                   <meta itemprop="description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 340 }}"/>
+                  {{ content }}
+                </div>
+            </article>
+
+            {% include share_panel.html %}

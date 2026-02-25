@@ -4,7 +4,7 @@ title: แก้ปัญหา Secureboot แม้จะใช้ Factory Key 
 date: '2025-09-19T23:21:06.000+07:00'
 author: Pakkapon Phongthawee
 tags:
-- คอมพิวเตอร์
+- computer
 thumbnail: /assets/images/thumbnail/solve-cant-secure-boot-with-factory-key.jpg
 modified_time: '2025-09-19T23:21:06.000+07:00'
 ---

@@ -1,17 +1,24 @@
 ---
 layout: default
 ---
-<div class="card">
-  <div class="card-content">
-    กำลังแสดงโพสที่เกี่ยวข้องกับ {% if site.tag_name[page.tagname] %}
-      <a href="{{baseurl}}/tag/{{page.tagname}}" class="tag" rel="tag ">{{site.tag_name[page.tagname]}}</a>
-    {% else %}
-      <a href="#" class="tag" rel="tag">{{page.tagname}}</a>
-    {% endif %}
-    <ul style="padding-left:40px;">
-    {% for post in site.tags[page.tagname] %}
-      <li style="list-style-type: circle;"><a href="{{post.url}}">{{post.title}}</a></li>
-    {% endfor %}
-    </ul>
+
+
+
+  <div class="single-post-container" >    
+    <div class="content">    
+
+      กำลังแสดงโพสที่เกี่ยวข้องกับ {% if site.tag_name[page.tagname] %}
+      <a href="{{baseurl}}/tag/{{page.tagname}}" class="tag is-light has-text-grey-dark"  rel="tag ">{{site.tag_name[page.tagname]}}</a>
+      {% else %}
+        <a href="#" class="tag" rel="tag">{{page.tagname}}</a>
+      {% endif %}
+      <ul>
+      {% for post in site.tags[page.tagname] %}
+        <li style="list-style-type: circle;"><a href="{{post.url}}">{{post.title}}</a></li>
+      {% endfor %}
+      </ul>
+
+    </div>
   </div>
-</div>
+
+  

@@ -5,7 +5,7 @@ date: '2026-01-18T15:30:06.000+07:00'
 author: Pakkapon Phongthawee
 thumbnail: /assets/images/thumbnail/access-tunnel-website-using-firefox-proxy.jpg
 tags:
-- คอมพิวเตอร์
+- computer
 modified_time: '2026-01-18T15:30:06.000+07:00'
 ---
 เนื่องจากต้องทำการเข้าใช้งาน IPMI ซึ่งตัว IPMI นี้อยู่คนละวงแลนหากเป็น Linux / Mac ก็จะใช้วิธีการตั้ง proxy ของ OS แต่สำหรับ Windows การตั้ง Proxy ของ Windows นั้นค่อนข้างวุ่นวาย เลยจะมาเล่าวิธีที่ผมใช้

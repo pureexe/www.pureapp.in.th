@@ -4,7 +4,7 @@ title: วิธี reservation (จอง) slurm node เพื่อแก้�
 date: '2026-01-17T11:44:06.000+07:00'
 author: Pakkapon Phongthawee
 tags:
-- คอมพิวเตอร์
+- computer
 modified_time: '2026-01-17T11:44:06.000+07:00'
 ---
 

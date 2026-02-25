@@ -1,96 +1,77 @@
 ---
 layout: default
 ---
-      <div class="index-post">
+      <div class="is-flex is-justify-content-space-between is-align-items-center mb-5">
+          {% if paginator.page == 1 %}
+          <h1 class="title is-4 mb-0 ml-5">บทความล่าสุด</h1>
+          {% else %}
+          <h1 class="title is-4 mb-0 ml-5">บทความหน้า {{ paginator.page }}</h1>
+          {% endif %}
+      </div>
+
+      <div class="posts-container">
         {% for post in paginator.posts %}
-        <div class="card" itemscope itemtype='http://schema.org/BlogPosting' style="margin-bottom:10px;margin-top: 10px;">
-          <div class="card-content">
-            <div class="columns">
-              {% if post.thumbnail %}
-              {% assign selfHostThumbnail = post.thumbnail | split:"://" | size %}
-              <div class="column is-two-fifths">
-                <a href="{{ post.url }}" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-                  <figure class="image is-16by9">
-                    <img src="{{ post.thumbnail }}" alt="{{post.title}}" style="border-radius: var(--bulma-card-radius)">
-                    <meta itemprop="url" content="{% if selfHostThumbnail == 1 %}{{ post.thumbnail | prepend: site.baseurl | prepend: site.url}}{% else %}{{post.thumbnail}}{% endif %}" />
-                    <meta itemprop="width" content="640" />
-                    <meta itemprop="height" content="312" />
-                  </figure>
-                </a>
-              </div>
-              {% else %}
-              <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-                <meta itemprop="url" content='{{" /assets/images/pureapp-logo-200.png " | prepend: site.baseurl | prepend: site.url }}'/>
-                <meta itemprop="width" content="200" />
-                <meta itemprop="height" content="200"/>
-              </div>
-              {% endif %}
-              <div class="column">
-                <div class="media">
-                  <div class="media-content">
-                    <p class="title is-4" itemprop="headline"><a href="{{ post.url }}">{{ post.title }}</a></p>
-                  </div>
-                </div>
-                <div>
-                  <span itemprop="description">{{ post.excerpt | strip_html | strip_newlines | truncate: 340, "" }}</span>
-                  <a href="{{ post.url }}"> อ่านต่อ... </a>
-                  <br>
-                </div>
-                <div itemprop="author" itemscope itemtype="https://schema.org/Person">
-                  {% if post.author %}
-                  <meta itemprop="name" content="{{post.author}}">
-                  {% else %}
-                  <meta itemprop="name" content="{{site.author}}">
-                  {% endif %}
-                </div>
-                <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
-                  {% if post.publisher %}
-                  <meta itemprop="name" content="{{post.publisher}}">
-                  {% else %}
-                  <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-                    <meta itemprop="url" content='{{"/assets/images/pureapp-logo-200.png " | prepend: site.baseurl | prepend: site.url }}'/>
-                    <meta itemprop="width" content="200">
-                    <meta itemprop="height" content="200">
-                  </div>
-                  <meta itemprop="name" content="{{site.publisher}}">
-                  {% endif %}
-                </div> 
-                <div style="margin-top: 1rem;">
-                  <meta content="{{ post.date }}" itemprop="datePublished">
-                  <meta content="{{ post.modified_time }}" itemprop="dateModified">
-                  <time style="display:inline-block;"><i class="fa fa-clock-o" aria-hidden="true"></i> {{ post.date | date: "%d"}} {% assign post_month = post.date | date: "%-m" | minus: 1 %}{{ site.month_name[post_month] }} {{ post.date | date: "%Y" | plus:"543"}}</time>
-                  <div class="tags" style="margin-left:10px;display:inline-block;">
-                  {% for tag in post.tags %}
-                    {% if site.tag_name[tag] %}
-                      <a href="{{baseurl}}/tag/{{tag}}" class="tag" rel="tag ">{{site.tag_name[tag]}}</a>
-                    {% else %}
-                      <a href="#" class="tag" rel="tag">{{tag}}</a>
-                    {% endif %}
-                  {% endfor %}
-                  </div>
-                </div> 
-              </div>
+        <article class="post-card" itemscope itemtype='http://schema.org/BlogPosting'>
+          <div class="post-content">
+            <h2 class="title is-4 post-title">
+                <a href="{{ post.url }}" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">{{ post.title }}</a>
+            </h2>
+            <p class="post-excerpt">
+              <span itemprop="description">{{ post.excerpt | strip_html | strip_newlines | truncate: 340, "" }}</span>
+              <a href="{{ post.url }}"> อ่านต่อ... </a>
+            </p>
+            <div class="post-meta">
+              <meta content="{{ post.date }}" itemprop="datePublished">
+              <meta content="{{ post.modified_time }}" itemprop="dateModified">
+              <span><i class="fa-regular fa-calendar mr-2"></i>{{ post.date | date: "%d"}} {% assign post_month = post.date | date: "%-m" | minus: 1 %}{{ site.month_name[post_month] }} {{ post.date | date: "%Y" | plus:"543"}}</span>
+              {% for tag in post.tags %}
+                {% if site.tag_name[tag] %}
+                  <a class="tag is-light has-text-grey-dark" rel="tag" href="{{baseurl}}/tag/{{tag}}">
+                    {{site.tag_name[tag]}}
+                  </a>
+                {% else %}
+                  <a class="tag is-light has-text-grey-dark" rel="tag" href="{{baseurl}}/tag/{{tag}}">
+                    {{tag}}
+                  </a>
+                {% endif %}
+              {% endfor %}
             </div>
           </div>
-        </div>
+          {% if post.thumbnail %}
+            {% assign selfHostThumbnail = post.thumbnail | split:"://" | size %}
+            <div class="post-thumbnail-wrapper">
+                <a href="{{ post.url }}" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">            
+                  <img src="{{ post.thumbnail }}" alt="{{post.title}}" class="post-thumbnail">
+                  <meta itemprop="url" content="{% if selfHostThumbnail == 1 %}{{ post.thumbnail | prepend: site.baseurl | prepend: site.url}}{% else %}{{post.thumbnail}}{% endif %}" />
+                  <meta itemprop="width" content="640" />
+                  <meta itemprop="height" content="312" />
+                </a>
+            </div>
+          {% else %}
+            <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+              <meta itemprop="url" content='{{" /assets/images/pureapp-logo-200.png " | prepend: site.baseurl | prepend: site.url }}'/>
+              <meta itemprop="width" content="200" />
+              <meta itemprop="height" content="200"/>
+            </div>
+          {% endif %}
+        </article>
         {% endfor %}
       </div>
-      <div class="pagination" style="width:100%;padding:12px;margin-top:8px;margin-bottom:8px;justify-content: space-between">
+
+      <div class="is-flex is-justify-content-center mt-6 mb-6">
         {% if paginator.previous_page %}
-        <a class="button" href="{{ paginator.previous_page_path }}" >
-          <span class="icon">
-            <i class="fa fa-arrow-left"></i>
-          </span>
-          <span>ใหม่กว่า</span>
-        </a>
+          <a class="button " href="{{ paginator.previous_page_path }}">
+            <span class="icon is-small mr-1"><i class="fa-solid fa-arrow-left"></i></span> หน้าก่อนหน้า 
+          </a>          
         {% endif %}
-        <div style="flex:1"></div>
+        {% if paginator.previous_page and paginator.next_page %}
+          <div style="flex: 1;"></div>
+        {% endif %}
         {% if paginator.next_page %}
-        <a style="" class="button" href="{{ paginator.next_page_path }}" >
-          <span>เก่ากว่า</span>
-          <span class="icon">
-            <i class="fa fa-arrow-right"></i>
-          </span>
-        </a>
+          <a class="button " href="{{ paginator.next_page_path }}">
+              หน้าถัดไป <span class="icon is-small ml-1"><i class="fa-solid fa-arrow-right"></i></span>
+          </a>
         {% endif %}
       </div>
+
+  

@@ -24,8 +24,9 @@ $on-tablet:        993px;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "layout",
-        "burger",
-        "widget-postlist",
+        //"layout",
+        //"burger",
+        //"widget-postlist",
         "markdown-render",
         "syntax-highlighting"
 ;

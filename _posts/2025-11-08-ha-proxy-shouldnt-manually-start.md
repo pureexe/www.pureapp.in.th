@@ -5,7 +5,7 @@ date: '2025-11-08T13:55:06.000+07:00'
 author: Pakkapon Phongthawee
 lang: th
 tags:
-- คอมพิวเตอร์
+- computer
 thumbnail: /assets/images/thumbnail/ha-proxy-shouldnt-manually-start.jpg
 modified_time: '2025-11-08T13:55:06.000+07:00'
 ---

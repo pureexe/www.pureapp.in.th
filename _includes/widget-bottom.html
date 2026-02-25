@@ -1,0 +1,56 @@
+            <div class="bottom-widgets columns mt-4">
+                <div class="column is-6">
+                    <h3 class="title is-6 mb-3 ml-5 has-text-grey">ติดตาม</h3>
+                    <div class="box is-shadowless  mb-2" style="border: 1px solid var(--bulma-border-weak); background: var(--bulma-scheme-main);">
+                        <div class="is-flex is-align-items-center mb-3">
+                            <figure class="image is-48x48 mr-3">
+                                <img class="is-rounded" src="https://avatars.githubusercontent.com/u/1303847?s=400&v=4" alt="Page Logo">
+                            </figure>
+                            <div>
+                                <a href="https://github.com/pureexe" target="_blank" class="title is-5 mb-1">Pakkapon Phongthawee</a>
+                                <p class="subtitle is-7 has-text-grey">github.com/pureexe</p>
+                            </div>
+                        </div>
+                        <a class="button is-light is-small is-fullwidth" href="https://github.com/pureexe" target="_blank">
+                            <span class="icon"><i class="fa-brands fa-github"></i></span>
+                            <span>Github Repositories</span>
+                        </a>
+                    </div>
+                    <div class="box is-shadowless" style="border: 1px solid var(--bulma-border-weak); background: var(--bulma-scheme-main);">
+                        <div class="is-flex is-align-items-center mb-3">
+                            <figure class="image is-48x48 mr-3">
+                                <img class="is-rounded" src="https://graph.facebook.com/639918592789743/picture?type=large" alt="Page Logo">
+                            </figure>
+                            <div>
+                                <a href="https://www.facebook.com/puresapp" target="_blank" class="title is-5 mb-1">Pure's app</a>
+                                <p class="subtitle is-7 has-text-grey">facebook.com/puresapp</p>
+                            </div>
+                        </div>
+                        <a class="button is-link is-small is-fullwidth" href="https://www.facebook.com/puresapp" target="_blank">
+                            <span class="icon"><i class="fa-brands fa-facebook"></i></span>
+                            <span>Follow Page</span>
+                        </a>
+                    </div>
+                    
+                    <!--
+                    <div class="fb-page" data-href="https://www.facebook.com/puresapp" data-tabs="" data-width="500" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/puresapp" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/puresapp">Pure&#039;s app</a></blockquote></div>                   
+                    -->                     
+                </div>
+
+                <div class="column is-6">
+                    <h3 class="title is-6 mb-3 ml-5 has-text-grey">บทความที่น่าสนใจ</h3>
+                    <div class="box is-shadowless" style="border: 1px solid var(--bulma-border-weak); background: var(--bulma-scheme-main);">
+                        <div class="content is-small mb-0">
+                            <ul class="recent-posts-list">
+                                {% for post in site.posts limit:3 %}
+                                 <li>
+                                    <a href="{{ post.url }}" class="has-text-weight-medium">{{ post.title }}</a>
+                                    <div class="has-text-grey is-size-7 mt-1"><i class="fa-regular fa-clock mr-1"></i> {{ post.date | date: "%d"}} {% assign post_month = post.date | date: "%-m" | minus: 1 %}{{ site.month_name_short[post_month] }} {{ post.date | date: "%Y" | plus:"543"}} </div>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                            <a href="/" class="button is-small is-light is-fullwidth mt-4">ดูบทความทั้งหมด</a>
+                        </div>
+                    </div>
+                </div>
+            </div>

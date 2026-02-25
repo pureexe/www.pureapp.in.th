@@ -1,110 +1,74 @@
 <header class="page-header">
-    <nav class="navbar is-transparent has-shadow">
-      <div class="container">
-        <input type="checkbox" id="menu-burger"/>
-        <div id="navbar-brand" class="navbar-brand">
-          <a class="navbar-item" href="/">
-            <img src="/assets/images/pureapp-logo-2017.png" alt="Pure's app บล็อกเล็กๆ ของเพียว" width="112" height="28">
-          </a>
-          <div class="is-hidden-desktop	" style="flex:1"></div>
-          <div class="navbar-item is-hidden-desktop">
-            <div class="field is-grouped">
-              <p class="control">
-                <a class=" button" href="#" onclick="toggleLightDarkTheme()" aria-label="dark or light mode">
-                  <span class="icon">
-                    <i class="fa fa-moon-o"></i>
-                  </span>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="container is-max-desktop">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#">
+                    <img src="/assets/images/pureapp-logo-2017.png" alt="Pure's app บล็อกเล็กๆ ของเพียว" width="112" height="28">
                 </a>
-              </p>
-              <p class="control">
-                <a class=" button " href="#" onclick="onClickShareButton()" aria-label="share this page">
-                  <span class="icon">
-                    <i class="fa fa-share"></i>
-                  </span>
-                </a>
-              </p>
-                              
-            </div>
-          </div>
 
-          <a role="button" class="button navbar-burger navbar-burger-border" data-target="nav-menu" aria-label="menu" aria-expanded="false">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>          
-        </div>
-        <label for="menu-burger" id="menu-burger-label"></label>        
-        <div id="nav-menu" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item" href="/">
-              หน้าแรก
-            </a>
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link" href="#">
-                บทความ
-              </a>
-              <div class="navbar-dropdown is-boxed">
-                <a class="navbar-item" href="/tag/computer">
-                  คอมพิวเตอร์
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
                 </a>
-                <a class="navbar-item" href="/tag/mathematics">
-                  คณิตศาสตร์
-                </a>
-                <a class="navbar-item" href="/tag/science">
-                  วิทยาศาสตร์
-                </a>
-                <a class="navbar-item" href="/tag/review">
-                  รีวิว
-                </a>
-                <a class="navbar-item" href="/tag/diary">
-                  ชีวิตประจำวัน
-                </a>
-                <hr class="navbar-divider">
-                <a class="navbar-item" href="/tag/announcement">
-                  ประกาศ
-                </a>
-              </div>
             </div>
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link" href="#">
-                ผลงาน
-              </a>
-              <div class="navbar-dropdown is-boxed">
-                <a class="navbar-item" href="/work/research">
-                  วิจัย
-                </a>
-                <a class="navbar-item" href="/work/translation">
-                  งานแปล
-                </a>
-                <a class="navbar-item" href="/work/application">
-                  แอปพลิเคชั่น
-                </a>
-              </div>
-            </div>
-          </div>
+         
 
-          <div class="navbar-end">
-            <div class="navbar-item is-hidden-touch">
-              <div class="field is-grouped ">
-                <p class="control">
-                  <a class=" button" href="#" onclick="toggleLightDarkTheme()">
-                    <span class="icon">
-                      <i class="fa fa-moon-o"></i>
-                    </span>
-                  </a>
-                </p>
-                <p class="control">
-                  <a class=" button is-link" href="#" onclick="onClickShareButton()">
-                    <span class="icon">
-                      <i class="fa fa-share"></i>
-                    </span>
-                  </a>
-                </p>                
-              </div>
+
+            <div id="navbarBasic" class="navbar-menu">
+                <div class="navbar-start ml-4">
+                    <a class="navbar-item" href="/">หน้าแรก</a>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">บทความ</a>
+                        <div class="navbar-dropdown is-boxed">
+                            <a class="navbar-item" href="/tag/computer">
+                                คอมพิวเตอร์
+                            </a>
+                            <a class="navbar-item" href="/tag/mathematics">
+                                คณิตศาสตร์
+                            </a>
+                            <a class="navbar-item" href="/tag/science">
+                                วิทยาศาสตร์
+                            </a>
+                            <a class="navbar-item" href="/tag/review">
+                                รีวิว
+                            </a>
+                            <a class="navbar-item" href="/tag/diary">
+                                ชีวิตประจำวัน
+                            </a>
+                            <hr class="navbar-divider">
+                            <a class="navbar-item" href="/tag/announcement">
+                                ประกาศ
+                            </a>
+                        </div>
+                    </div>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">ผลงาน</a>
+                        <div class="navbar-dropdown is-boxed">
+                            <a class="navbar-item" href="/work/research">
+                            วิจัย
+                            </a>
+                            <a class="navbar-item" href="/work/translation">
+                            งานแปล
+                            </a>
+                            <a class="navbar-item" href="/work/application">
+                            แอปพลิเคชั่น
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <button class="button is-ghost is-rounded" id="theme-toggle" title="สลับโหมดมืด/สว่าง">
+                                <span class="icon"><i class="fa-solid fa-moon"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-        </div>
-      </nav>
+    </nav>
 </header>

@@ -3,20 +3,15 @@
   {% include head.html %}
   <body style="display: flex;min-height: 100vh;flex-direction: column">
     {% include header.html %}
-    <main style="flex:1;">
-      <div class="container">
-        <div class="columns is-desktop" style="max-width: 1280px;margin-left: auto;margin-right: auto;">
-          <div class="column is-three-quarters-desktop panel-main">
-            {{ content }}
-          </div>
-          <div class="column is-one-quarter-desktop panel-sidebar">
-            {% include sidebar.html%}
-          </div>
+    <main>
+      <section class="section">
+        <div class="container is-max-desktop">
+          {{ content }}
+          {% include widget-bottom.html %}
         </div>
-      </div>
+      </section>     
     </main>
     {% include footer.html %}
-    {% include sharemodal.html %}
     {% include javascript.html %}
   </body>
 </html>

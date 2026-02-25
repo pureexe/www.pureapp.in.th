@@ -4,7 +4,7 @@ title: เลือก layout ให้คีบอร์ด 42 ปุ่ม
 date: '2025-11-22T22:15:06.000+07:00'
 author: Pakkapon Phongthawee
 tags:
-- คอมพิวเตอร์
+- computer
 thumbnail: /assets/images/thumbnail/pick-layout-for-42-key-keyboard.jpg
 modified_time: 2025-11-22T22:15:06.000+07:00'
 ---
