@@ -3,65 +3,8 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DHWBY6W9JK"></script>
 
-<!--
-<script async src="/assets/js/theme-toggle.js"></script>
-<script async src="/assets/js/sharebutton.js?v=20241028-1"></script>
--->
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-          // Navbar Mobile Toggle
-          
-          const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-          if ($navbarBurgers.length > 0) {
-              $navbarBurgers.forEach( el => {
-                  el.addEventListener('click', () => {
-                      const target = el.dataset.target;
-                      const $target = document.getElementById(target);
-                      el.classList.toggle('is-active');
-                      $target.classList.toggle('is-active');
-                  });
-              });
-          }
+<script async src="/assets/js/theme.js"></script>
 
-        // =========================================
-        // THEME TOGGLE LOGIC (Backward Compatible)
-        // =========================================
-        // Theme Toggle Logic
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const htmlTag = document.documentElement;
-        const themeIcon = themeToggleBtn.querySelector('i');
-
-        // 1. ตอนโหลดหน้าเว็บเสร็จ ให้อ่านค่า Theme ปัจจุบัน (ที่ script บน <head> ตั้งไว้) มาเปลี่ยนไอคอนให้ตรง
-        const currentTheme = htmlTag.getAttribute('data-theme');
-        if (currentTheme === 'dark') {
-            themeIcon.classList.remove('fa-moon');
-            themeIcon.classList.add('fa-sun'); // เป็นโหมดมืด โชว์ปุ่มพระอาทิตย์
-        } else {
-            themeIcon.classList.remove('fa-sun');
-            themeIcon.classList.add('fa-moon'); // เป็นโหมดสว่าง โชว์ปุ่มพระจันทร์
-        }
-
-        // 2. เมื่อผู้ใช้กดคลิกปุ่ม
-        themeToggleBtn.addEventListener('click', () => {
-            const activeTheme = htmlTag.getAttribute('data-theme');
-            const newTheme = activeTheme === 'light' ? 'dark' : 'light';
-            
-            // สลับ Theme
-            htmlTag.setAttribute('data-theme', newTheme);
-            // บันทึกลง Local Storage
-            localStorage.setItem('theme', newTheme);
-            
-            // เปลี่ยนไอคอน
-            if (newTheme === 'dark') {
-                themeIcon.classList.remove('fa-moon');
-                themeIcon.classList.add('fa-sun');
-            } else {
-                themeIcon.classList.remove('fa-sun');
-                themeIcon.classList.add('fa-moon');
-            }
-        });
-      });
-</script>
 
 <script>
   window.dataLayer = window.dataLayer || [];

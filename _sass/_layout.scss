@@ -215,7 +215,7 @@ body {
 @media (max-width: 768px) {
     /* เอา Padding ซ้าย-ขวาของ Section ออก เพื่อให้ Card ชิดขอบจอ */
     .section {
-        padding: 1.5rem 0 !important; 
+        padding: 0 !important; 
     }
 
     /* สิ่งที่อยู่นอก Card ต้องมี Padding ซ้าย-ขวา เพื่อไม่ให้ตัวหนังสือติดขอบจอ */
@@ -253,5 +253,8 @@ body {
         border-radius: 0;
         border-left: none;
         border-right: none;
+    }
+    .ariticle-header-text{
+        margin-top: 1.5rem;
     }
 }
