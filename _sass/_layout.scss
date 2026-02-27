@@ -319,19 +319,20 @@ h1, h2, h3, h4, h5, h6, .title, .navbar, .button, .tag {
 }
 
 /* =========================================
-   THEME-AWARE COLORS
+   THEME-AWARE COLORS & ACCESSIBILITY
    ========================================= */
-/* ค่าเริ่มต้น (โหมดมืด) ใช้สี Primary ปกติ */
 .theme-aware-primary {
     color: var(--bulma-primary) !important;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
+    /* เพิ่ม 2 บรรทัดนี้เพื่อแก้ปัญหา Accessibility */
+    text-decoration: underline; 
+    text-underline-offset: 3px; /* ดันเส้นใต้ลงมานิดนึงให้ดูโมเดิร์น ไม่ทับตัวอักษร */
 }
 
 .theme-aware-primary:hover {
     color: var(--bulma-primary-light) !important;
 }
 
-/* เมื่อเปลี่ยนเป็นโหมดสว่าง (Light Mode) ให้ดึงสี Primary Dark มาใช้ */
 html[data-theme="light"] .theme-aware-primary {
     color: var(--bulma-primary-dark) !important;
 }
