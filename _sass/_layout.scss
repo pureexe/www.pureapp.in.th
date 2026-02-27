@@ -317,3 +317,25 @@ h1, h2, h3, h4, h5, h6, .title, .navbar, .button, .tag {
     opacity: 1;
     bottom: 50px; /* เลื่อนขึ้นมานิดนึงตอนแสดงผล */
 }
+
+/* =========================================
+   THEME-AWARE COLORS
+   ========================================= */
+/* ค่าเริ่มต้น (โหมดมืด) ใช้สี Primary ปกติ */
+.theme-aware-primary {
+    color: var(--bulma-primary) !important;
+    transition: color 0.2s ease;
+}
+
+.theme-aware-primary:hover {
+    color: var(--bulma-primary-light) !important;
+}
+
+/* เมื่อเปลี่ยนเป็นโหมดสว่าง (Light Mode) ให้ดึงสี Primary Dark มาใช้ */
+html[data-theme="light"] .theme-aware-primary {
+    color: var(--bulma-primary-dark) !important;
+}
+
+html[data-theme="light"] .theme-aware-primary:hover {
+    color: var(--bulma-primary) !important;
+}
