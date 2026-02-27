@@ -1,20 +1,27 @@
 <header class="page-header">
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="container is-max-desktop">
+            
             <div class="navbar-brand">
                 <a class="navbar-item" href="/">
-                    <img src="/assets/images/pureapp-logo-2017.png" alt="Pure's app บล็อกเล็กๆ ของเพียว" width="112" height="28">
+                    <img src="/assets/images/pure-logo.png" alt="Pure's app บล็อกเล็กๆ ของเพียว" >
                 </a>
+                <div class="navbar-item is-hidden-desktop ml-auto is-flex is-align-items-center" style="gap: 0.25rem;">
+                    <button class="button is-ghost is-rounded share-btn" title="แชร์หน้านี้">
+                        <span class="icon"><i class="fa-solid fa-share"></i></span>
+                    </button>
+                    <button class="button is-ghost is-rounded theme-toggle-btn" title="สลับโหมดมืด/สว่าง">
+                        <span class="icon"><i class="fa-solid fa-moon"></i></span>
+                    </button>
+                </div>
 
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic" style="margin-left: 0px;">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                 </a>
             </div>
-         
-
 
             <div id="navbarBasic" class="navbar-menu">
                 <div class="navbar-start ml-4">
@@ -58,17 +65,19 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="navbar-end">
-                    <div class="navbar-item">
-                        <div class="buttons">
-                            <button class="button is-ghost is-rounded" id="theme-toggle" title="สลับโหมดมืด/สว่าง">
-                                <span class="icon"><i class="fa-solid fa-moon"></i></span>
-                            </button>
-                        </div>
+                    <div class="navbar-item is-hidden-touch">
+                        <button class="button is-ghost is-rounded share-btn" title="แชร์หน้านี้">
+                            <span class="icon"><i class="fa-solid fa-share"></i></span>
+                        </button>
+                        <button class="button is-ghost is-rounded theme-toggle-btn" title="สลับโหมดมืด/สว่าง">
+                            <span class="icon"><i class="fa-solid fa-moon"></i></span>
+                        </button>
                     </div>
                 </div>
             </div>
+            
         </div>
     </nav>
 </header>

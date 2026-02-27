@@ -154,7 +154,7 @@ DB
 Doxygen
 EasyBuild
 Eigen
-FFTW.
+FFTW
 FFMpeg
 FlexiBLAS
 GCC
