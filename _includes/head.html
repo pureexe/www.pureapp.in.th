@@ -8,9 +8,16 @@
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
   <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.baseurl}}">
   <link rel="icon" sizes="192x192" href="/assets/images/pureapp-logo-rect.png">
+
+  <link rel="preload" as="style" href="{{ "/assets/css/bulma-v1.0.4.min.css" | prepend: site.baseurl }}?v=20260228-1">
   <link rel="stylesheet" href="{{ "/assets/css/bulma-v1.0.4.min.css" | prepend: site.baseurl }}?v=20260228-1">
-  <link rel="stylesheet" href="{{ "/assets/css/fontawesome-v6.7.2.all.min.css" | prepend: site.baseurl }}?v=20260228-1">
-  <link rel="stylesheet" href="{{ "/assets/css/fonts.css" | prepend: site.baseurl }}?v=20260228-1">
+ 
+  <link rel="preload" as="style" href="{{ "/assets/css/fonts.css" | prepend: site.baseurl }}?v=20260228-1">
+  <link rel="stylesheet" href="{{ "/assets/css/fonts.css" | prepend: site.baseurl }}?v=20260228-1" media="print" onload="this.media='all'">
+
+  <link rel="preload" as="style" href="{{ "/assets/css/fontawesome-v6.7.2.all.min.css" | prepend: site.baseurl }}?v=20260228-1">
+  <link rel="stylesheet" href="{{ "/assets/css/fontawesome-v6.7.2.all.min.css" | prepend: site.baseurl }}?v=20260228-1" media="print" onload="this.media='all'">
+ 
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}?v=20260228-2">
   <script>
       // select theme (Need to include script there to anti blocking)
