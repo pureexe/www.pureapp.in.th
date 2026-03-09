@@ -75,7 +75,30 @@ echo 'void __x86_return_thunk(void) {}' >> /usr/lpp/mmfs/src/gpl-linux/kdump.c
 
 mmbuildgpl
 
+
+เปิดใช้ ip forward
+
+sysctl -w net.ipv4.ip_forward=1
+
+ทำให้อยู่ถาวร
+
+จากนั้นแก้ route
+ip route add 100.0.0.201/32 via 100.0.5.201
+ip route add 100.0.0.202/32 via 100.0.5.202
+ip route add 100.0.0.203/32 via 100.0.5.203
+
+ทำให้อยู่ถาวร 
+
+nmcli connection modify eth1 +ipv4.routes "100.0.0.201/32 100.0.5.201"
+nmcli connection modify eth1 +ipv4.routes "100.0.0.202/32 100.0.5.202"
+nmcli connection modify eth1 +ipv4.routes "100.0.0.203/32 100.0.5.203"
+
 mmsdrrestore -p io1-ib0
 
 
+
+
 จากนั้น mmstartup
+
+ให้ทำการ mount โดย
+mmmount all
