@@ -4,7 +4,7 @@ title: Cosmos1-diffusion-renderer จัดการเงาใน albedo ไ�
 date: '2025-09-05T14:55:06.000+07:00'
 author: Pakkapon Phongthawee
 tags:
-- วิจัย
+- research
 thumbnail: /assets/images/thumbnail/diffusion-renderer-albedo-no-more-cast-shadow.jpg
 modified_time: '2025-09-05T14:55:06.000+07:00'
 ---

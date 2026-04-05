@@ -4,7 +4,7 @@ title: วิธีการเข้ารหัสแบบมีกุญแ�
 date: '2016-01-01T10:10:00.000+07:00'
 author: Pakkapon Phongthawee
 tags:
-- วิจัย
+- research
 modified_time: '2016-01-01T10:10:00.000+07:00'
 thumbnail:
 ---
