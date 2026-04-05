@@ -13,7 +13,7 @@ tags:
 
 ### index.html
 
-```plain
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -29,7 +29,7 @@ tags:
 
 ### config.yml
 
-```plain
+```yaml
 # yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
 
 backend:

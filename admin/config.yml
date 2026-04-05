@@ -14,11 +14,29 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - { name: "title", label: "Title" }
-      - { name: "date", label: "Date", widget: "datetime" }
-      - { name: "thumbnail", label: "Thumbnail", widget: "image" }
-      - { name: "tags", label: "Tags", widget: "list" }
-      - { name: "body", label: "Body", widget: "markdown" }
+      - name: "title"
+        label: "Title"
+      - name: "date"
+        label: "Date"
+        widget: "datetime"
+      - name: thumbnail
+        label: "Thumbnail"
+        widget: "image"
+      - name: "tags"
+        label: "Tags"
+        widget: "select"
+        multiple: true
+        options:
+          - announcement
+          - computer
+          - diary
+          - mathematics
+          - review
+          - science
+          - other
+      - name: "body"
+        label: "Body" 
+        widget: "markdown"
 
   - name: "drafts"
     label: "Drafts"
@@ -26,8 +44,26 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - { name: "title", label: "Title" }
-      - { name: "date", label: "Date", widget: "datetime" }
-      - { name: "thumbnail", label: "Thumbnail", widget: "image" }
-      - { name: "tags", label: "Tags", widget: "list" }
-      - { name: "body", label: "Body", widget: "markdown" }
+      - name: "title"
+        label: "Title"
+      - name: "date"
+        label: "Date"
+        widget: "datetime"
+      - name: thumbnail
+        label: "Thumbnail"
+        widget: "image"
+      - name: "tags"
+        label: "Tags"
+        widget: "select"
+        multiple: true
+        options:
+          - announcement
+          - computer
+          - diary
+          - mathematics
+          - review
+          - science
+          - other
+      - name: "body"
+        label: "Body" 
+        widget: "markdown"
