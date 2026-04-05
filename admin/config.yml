@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
+backend:
+  name: github
+  repo: pureexe/www.pureapp.in.th
+
+media_folder: /assets/bucket
+public_folder: /assets/bucket
+
+collections:
+  - name: "posts"
+    label: "Published Posts"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { name: "title", label: "Title" }
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "tags", label: "Tags", widget: "list" }
+      - { name: "body", label: "Body", widget: "markdown" }
+
+  - name: "drafts"
+    label: "Drafts"
+    folder: "_drafts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { name: "title", label: "Title" }
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "tags", label: "Tags", widget: "list" }
+      - { name: "body", label: "Body", widget: "markdown" }

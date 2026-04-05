@@ -32,7 +32,7 @@ month_name:
   - เมษายน
   - พฤษภาคม
   - มิถุนายน
-  - กรกฏาคม
+  - กรกฎาคม
   - สิงหาคม
   - กันยายน
   - ตุลาคม
@@ -49,7 +49,7 @@ month_name_short:
   - ส.ค.
   - ก.ย.
   - ต.ค.
-  - พ.ค.
+  - พ.ย. 
   - ธ.ค.
 tag_name:
   announcement: ประกาศ
@@ -59,3 +59,10 @@ tag_name:
   review: รีวิว
   science: วิทยาศาสตร์
   other: จิปาถะ
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
