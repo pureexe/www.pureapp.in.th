@@ -1,2 +1,6 @@
 User-agent: *
-Disallow: /search
+Allow: /
+Disallow: /admin/
+Disallow: /search/
+
+Sitemap: https://pure.in.th/sitemap.xml

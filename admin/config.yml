@@ -16,6 +16,7 @@ collections:
     fields:
       - { name: "title", label: "Title" }
       - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "thumbnail", label: "Thumbnail", widget: "image" }
       - { name: "tags", label: "Tags", widget: "list" }
       - { name: "body", label: "Body", widget: "markdown" }
 
@@ -27,5 +28,6 @@ collections:
     fields:
       - { name: "title", label: "Title" }
       - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "thumbnail", label: "Thumbnail", widget: "image" }
       - { name: "tags", label: "Tags", widget: "list" }
       - { name: "body", label: "Body", widget: "markdown" }
