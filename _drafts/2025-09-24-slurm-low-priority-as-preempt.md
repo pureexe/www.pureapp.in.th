@@ -3,7 +3,6 @@ layout: post
 title: SLURM ตั้ง low priority ด้วยระบบ preempt
 date: '2025-09-05T14:55:06.000+07:00'
 author: Pakkapon Phongthawee
-lang: th
 tags:
 - คอมพิวเตอร์
 thumbnail: ""

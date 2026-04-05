@@ -3,7 +3,6 @@ layout: post
 title: Slurm สั่ง sinfo แล้วค้างเกิดจาก โฟลเดอร์หาย
 date: '2025-12-06T14:42:06.000+07:00'
 author: Pakkapon Phongthawee
-lang: th
 tags:
 - computer
 thumbnail: /assets/images/thumbnail/slurm-freeze-on-sinfo-turnout-it-missing-directory.jpg

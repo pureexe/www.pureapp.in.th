@@ -3,7 +3,6 @@ layout: post
 title: Cosmos1-diffusion-renderer จัดการเงาใน albedo ได้ดีมาก
 date: '2025-09-05T14:55:06.000+07:00'
 author: Pakkapon Phongthawee
-lang: th
 tags:
 - วิจัย
 thumbnail: /assets/images/thumbnail/diffusion-renderer-albedo-no-more-cast-shadow.jpg

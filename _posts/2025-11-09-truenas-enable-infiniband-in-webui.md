@@ -3,7 +3,6 @@ layout: post
 title: วิธีการเปิดใช้งาน Infiniband บน TrueNAS ผ่าน WebUI โดยไม่แก้ไฟล์ระบบ
 date: '2025-11-09T22:15:06.000+07:00'
 author: Pakkapon Phongthawee
-lang: th
 tags:
 - computer
 thumbnail: /assets/images/thumbnail/truenas-enable-infiniband-in-webui.jpg

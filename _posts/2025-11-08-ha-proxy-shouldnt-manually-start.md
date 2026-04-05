@@ -3,7 +3,6 @@ layout: post
 title: HA Proxy ไม่ควรสั่ง start ด้วยตัวเอง
 date: '2025-11-08T13:55:06.000+07:00'
 author: Pakkapon Phongthawee
-lang: th
 tags:
 - computer
 thumbnail: /assets/images/thumbnail/ha-proxy-shouldnt-manually-start.jpg
