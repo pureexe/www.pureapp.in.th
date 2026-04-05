@@ -4,8 +4,8 @@ backend:
   name: github
   repo: pureexe/www.pureapp.in.th
 
-media_folder: /assets/bucket
-public_folder: /assets/bucket
+media_folder: assets/images
+public_folder: /assets/images
 
 collections:
   - name: "posts"
@@ -13,6 +13,9 @@ collections:
     folder: "_posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "{{thumbnail}}"
+    media_folder: "/assets/images/post/{{slug}}"
+    public_folder: "/assets/images/post/{{slug}}"
     fields:
       - name: "title"
         label: "Title"
@@ -43,6 +46,9 @@ collections:
     folder: "_drafts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "{{thumbnail}}"   
+    media_folder: "/assets/images/post/{{slug}}"
+    public_folder: "/assets/images/post/{{slug}}"
     fields:
       - name: "title"
         label: "Title"
