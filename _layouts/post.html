@@ -11,7 +11,7 @@ layout: default
                 </h1>
 
                 <div class="single-post-meta">
-                    <span class="has-text-weight-medium"><i class="fa-regular fa-calendar mr-2"></i>18 มกราคม 2569</span>
+                    <span class="has-text-weight-medium"><i class="fa-regular fa-calendar mr-2"></i>{{ page.date | date: "%d"}} {% assign page_month = page.date | date: "%-m" | minus: 1 %}{{ site.month_name[page_month] }} {{ page.date | date: "%Y" | plus:"543"}} </span>
                     
                     <div class="tags mb-0">
                        
