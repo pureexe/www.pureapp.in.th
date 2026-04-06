@@ -1,5 +1,12 @@
 # yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
 
+app_title: ระบบจัดการโพส pure.in.th
+
+logo:
+  src: /assets/images/p-logo.svg
+  show_in_header: true
+
+
 backend:
   name: github
   repo: pureexe/www.pureapp.in.th
