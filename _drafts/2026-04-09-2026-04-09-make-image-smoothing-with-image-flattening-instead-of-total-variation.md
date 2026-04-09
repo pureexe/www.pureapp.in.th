@@ -1,7 +1,7 @@
 ---
 title: อยากให้ภาพ smooth ใช้ image flattening อาจจะดีกว่า total variation
 date: 2026-04-09T23:43:00
-thumbnail: https://pure.in.th/assets/images/placeholder.png
+thumbnail: ''
 tags:
   - mathematics
 ---
