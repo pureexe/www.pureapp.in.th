@@ -32,6 +32,7 @@ collections:
       - name: thumbnail
         label: "Thumbnail"
         widget: "image"
+        required: false
       - name: "tags"
         label: "Tags"
         widget: "select"
@@ -65,6 +66,7 @@ collections:
       - name: thumbnail
         label: "Thumbnail"
         widget: "image"
+        required: false
       - name: "tags"
         label: "Tags"
         widget: "select"
