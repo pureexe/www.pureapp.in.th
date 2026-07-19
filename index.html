@@ -37,7 +37,7 @@ layout: default
               {% endfor %}
             </div>
           </div>
-          {% if post.thumbnail and post.thumbnail != blank %}
+          {% if post.thumbnail and post.thumbnail != blank and post.thumbnail != '' %}
             {% assign selfHostThumbnail = post.thumbnail | split:"://" | size %}
             <div class="post-thumbnail-wrapper">
                 <a href="{{ post.url }}" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">            
