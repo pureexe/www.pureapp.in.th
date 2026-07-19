@@ -30,7 +30,7 @@ layout: default
                 </div>
                 
                 <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-                  {% if page.thumbnail %}
+                  {% if page.thumbnail and page.thumbnail != blank and page.thumbnail != '' %}
                   {% assign selfHostThumbnail = page.thumbnail | split:"://" | size %}
                   <meta itemprop="url" content="{% if selfHostThumbnail == 1 %}{{ page.thumbnail | prepend: site.baseurl | prepend: site.url}}{% else %}{{page.thumbnail}}{% endif %}"/>
                   <meta itemprop="width" content="640" />
