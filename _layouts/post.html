@@ -44,7 +44,7 @@ layout: default
                 
                 {% assign rawExtension = page.path | split:"." | last %}
                 {% if rawExtension == "md" %}
-                {% if page.thumbnail %}
+                {% if page.thumbnail and page.thumbnail != blank and page.thumbnail != '' %}
                 <img src="{{ page.thumbnail | prepend: site.baseurl | prepend: site.url }}" class="featured-image">
                 {% endif %}
                 {% endif %}
