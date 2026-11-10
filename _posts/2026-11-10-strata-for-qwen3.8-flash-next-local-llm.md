@@ -1,6 +1,6 @@
 ---
 title: ใช้ Strata เพื่อรัน qwen3.8-flash-next
-date: 2026-07-20T00:13
+date: '2026-11-10T14:46:00.000+07:00'
 thumbnail: ""
 tags:
   - computer
