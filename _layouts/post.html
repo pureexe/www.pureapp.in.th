@@ -32,7 +32,7 @@ layout: default
                 <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
                   {% if page.thumbnail and page.thumbnail != blank and page.thumbnail != '' %}
                   {% assign selfHostThumbnail = page.thumbnail | split:"://" | size %}
-                  <meta itemprop="url" content="{% if selfHostThumbnail == 1 %}{{ page.thumbnail | prepend: site.baseurl | prepend: site.url}}{% else %}{{page.thumbnail}}{% endif %}"/>
+                  <meta itemprop="url" content="{% if selfHostThumbnail == 1 and jekyll.environment == 'production' %}{{ page.thumbnail | prepend: site.baseurl | prepend: site.url}}{% else %}{{page.thumbnail}}{% endif %}"/>
                   <meta itemprop="width" content="640" />
                   <meta itemprop="height" content="312" />
                   {% else %}
@@ -45,7 +45,7 @@ layout: default
                 {% assign rawExtension = page.path | split:"." | last %}
                 {% if rawExtension == "md" %}
                 {% if page.thumbnail and page.thumbnail != blank and page.thumbnail != '' %}
-                <img src="{{ page.thumbnail | prepend: site.baseurl | prepend: site.url }}" class="featured-image">
+                <img src="{% if selfHostThumbnail == 1 and jekyll.environment == 'production' %}{{ page.thumbnail | prepend: site.baseurl | prepend: site.url }}{% else %}{{ page.thumbnail }}{% endif %}" class="featured-image">
                 {% endif %}
                 {% endif %}
                 
