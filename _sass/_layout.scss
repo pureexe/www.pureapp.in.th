@@ -628,6 +628,21 @@ html[data-theme="dark"] .content code:not(pre code) {
     background: var(--pure-rainbow);
 }
 
+/* เครดิตท้าย footer: "grey" ของ bulma เป็นสีคงที่ (#69748c) ตัดกับพื้นไม่พอ
+   โดยเฉพาะ text ขนาดเล็ก → ใช้ token ข้อความของธีมแทน */
+.footer .has-text-grey {
+    color: var(--bulma-text) !important;
+}
+
+.footer .has-text-grey-dark {
+    color: var(--bulma-text-strong) !important;
+}
+
+.footer .content a.has-text-grey:hover,
+.footer .content a.has-text-grey-dark:hover {
+    color: var(--brand-color) !important;
+}
+
 /* =========================================
    MOBILE RESPONSIVE (Edge-to-Edge Cards)
    ========================================= */
