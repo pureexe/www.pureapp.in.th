@@ -14,16 +14,16 @@ tags:
 ### First party provider
 | Model                          | Provider                                                                    | Tok/s     | Input     | Cache     | Output    | 
 |--------------------------------|-----------------------------------------------------------------------------|-----------|-----------|-----------| --------- |
-| Muse Spark 1.3 Contributor     | [Meta.ai Developer](https://dev.meta.ai/models/muse-spark)                  | 800       |   0.1     |    0.002  |    0.2    |  
-| Gemini 2.5 Flash-lite          | [Google AI Studio](https://aistudio.google.com/docs/pricing)                |           |   0.05    |    0.01   |    0.2    |
-| Mimo-v2.6-flash                | [Xiaomi Mimo](Ihttps://mimo.mi.com/docs/en-US/price/pay-as-you-go)          |           |   0.15    |    0.003  |    0.3    |
-| Qwen3.5-Flash                  | [Qwen Cloud](https://qwencloud.com)                                         |           |   0.1     |    0.01   |    0.4    |
-| Qwen3.8-Flash                  | [Qwen Cloud](https://qwencloud.com)                                         |           |   0.15    |    0.016  |    0.47   |
-| GPT-6-Luna                     | [OpenAI Developer](https://developers.openai.com/api/docs/pricing)          |           |   0.1     |    0.01   |    0.5    |
-| GLM-5.3-flash                  | [Z.ai](https://z.ai)                                                        |           |   0.15    |    0.03   |    0.5    |
-| DeepSeek v4.1 Flash (off-peak) | [DeepSeek Platform](https://platform.deepseek.com)                          | 200       |   0.15    |    0.003  |    0.6    |
-| Gemini 3.5 Flash-lite          | [Google AI Studio](https://aistudio.google.com/docs/pricing)                |           |   0.15    |    0.02   |    1.25   |
-| Haiku 5.5                      | [Claude Platform](https://platform.claude.com/docs/en/about-claude/pricing) |           |   0.5     |    0.05   |    2.5    |
+| Muse Spark 1.3 Contributor     | [Meta.ai Developer](https://dev.meta.ai/models/muse-spark)                  |    800    |   0.1     |   0.002   |    0.2    |  
+| Mimo-v2.6-flash                | [Xiaomi Mimo](Ihttps://mimo.mi.com/docs/en-US/price/pay-as-you-go)          |           |   0.15    |   0.003   |    0.3    |
+| Qwen3.5-Flash                  | [Qwen Cloud](https://qwencloud.com)                                         |           |   0.1     |   0.01    |    0.4    |
+| Qwen3.8-Flash                  | [Qwen Cloud](https://qwencloud.com)                                         |           |   0.15    |   0.016   |    0.47   |
+| GPT-6-Luna                     | [OpenAI Developer](https://developers.openai.com/api/docs/pricing)          |           |   0.1     |   0.01    |    0.5    |
+| GLM-5.3-flash                  | [Z.ai](https://z.ai)                                                        |           |   0.15    |   0.03    |    0.5    |
+| DeepSeek v4.1 Flash (off-peak) | [DeepSeek Platform](https://platform.deepseek.com)                          |    200    |   0.15    |   0.003   |    0.6    |
+| Gemini 3.1 Flash-lite          | [Google AI Studio](https://aistudio.google.com/docs/pricing)                |    500    |   0.125   |   0.00125 |    0.75   | 
+| Gemini 3.5 Flash-lite          | [Google AI Studio](https://aistudio.google.com/docs/pricing)                |    500    |   0.15    |   0.02    |    1.25   |
+| Haiku 5.5                      | [Claude Platform](https://platform.claude.com/docs/en/about-claude/pricing) |           |   0.5     |   0.05    |    2.5    |
 | Currency: USD                  | Last updated:  Nov 19, 2026                                                 |           |           |           |           |
 
 
