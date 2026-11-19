@@ -24,7 +24,7 @@ tags:
 | Gemini 3.1 Flash-lite          | [Google AI Studio](https://aistudio.google.com/docs/pricing)                |    500    |   0.125   |   0.00125 |    0.75   | 
 | Gemini 3.5 Flash-lite          | [Google AI Studio](https://aistudio.google.com/docs/pricing)                |    500    |   0.15    |   0.02    |    1.25   |
 | Haiku 5.5                      | [Claude Platform](https://platform.claude.com/docs/en/about-claude/pricing) |           |   0.5     |   0.05    |    2.5    |
-| Currency: USD                  | Last updated:  Nov 19, 2026                                                 |           |           |           |           |
+| Currency: USD per 1M token     | Last updated:  Nov 19, 2026                                                 |           |           |           |           |
 
 
 กลุ่มพ่อค้าคนกลาง (Thrid party provider)
